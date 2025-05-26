@@ -1,0 +1,9 @@
+erdiagram SistemaIES
+notation=chen
+
+entity Departamento {}
+entity Disciplina {}
+
+relationship Responsavel{
+    Departamento -> Disciplina[N]
+}
