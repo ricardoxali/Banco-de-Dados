@@ -27,3 +27,8 @@ relationship Requisito {
 relationship Equivale {
     Disciplina[0..N] -> Disciplina[0..N]
 }
+
+relationship Oferta {
+    Curso -> Disciplina[N]
+    semestre
+}
