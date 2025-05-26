@@ -12,6 +12,14 @@ entity Disciplina {
     descricao
 }
 
-relationship Responsavel{
+relationship Responsavel {
     Departamento[1..1] -> Disciplina[N]
+}
+
+relationship Requisito {
+    Disciplina[0..N] -> Disciplina[0..N|'pré-requisito']
+}
+
+relationship Equivale {
+    Disciplina[0..N] -> Disciplina[0..N]
 }
