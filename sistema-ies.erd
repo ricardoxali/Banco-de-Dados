@@ -6,7 +6,11 @@ entity Departamento {
     nome
     descricao
 }
-entity Disciplina {}
+entity Disciplina {
+    codigo key
+    nome
+    descricao
+}
 
 relationship Responsavel{
     Departamento[1..1] -> Disciplina[N]
