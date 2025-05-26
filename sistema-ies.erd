@@ -5,5 +5,5 @@ entity Departamento {}
 entity Disciplina {}
 
 relationship Responsavel{
-    Departamento -> Disciplina[N]
+    Departamento[1..1] -> Disciplina[N]
 }
