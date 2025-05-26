@@ -41,4 +41,5 @@ relationship Leciona {
 
 relationship Matriculado {
     Aluno -> Disciplina
+    notas multivalued
 }
