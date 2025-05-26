@@ -11,6 +11,10 @@ entity Disciplina {
     nome
     descricao
 }
+entity Curso {
+    codigo key
+    denominacao
+}
 
 relationship Responsavel {
     Departamento[1..1] -> Disciplina[N]
