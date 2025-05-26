@@ -16,6 +16,7 @@ entity Curso {
     denominacao
 }
 entity Professor {}
+entity Aluno {}
 
 relationship Responsavel {
     Departamento[1..1] -> Disciplina[N]
@@ -36,4 +37,8 @@ relationship Oferta {
 
 relationship Leciona {
     Professor -> Disciplina
+}
+
+relationship Matriculado {
+    Aluno -> Disciplina
 }
