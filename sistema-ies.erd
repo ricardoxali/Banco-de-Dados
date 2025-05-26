@@ -15,8 +15,20 @@ entity Curso {
     codigo key
     denominacao
 }
-entity Professor {}
-entity Aluno {}
+entity Professor {
+    matricula key
+    nome
+    habilitacoes multivalued
+    email optional
+}
+entity Aluno {
+    matricula key
+    nome
+    rg // atributo unico
+    endereco
+    telefones multivalued
+    email optional
+}
 
 relationship Responsavel {
     Departamento[1..1] -> Disciplina[N]
@@ -31,15 +43,15 @@ relationship Equivale {
 }
 
 relationship Oferta {
-    Curso -> Disciplina[N]
+    Curso[1..N] -> Disciplina[0..N]
     semestre
 }
 
 relationship Leciona {
-    Professor -> Disciplina
+    Professor[0..N] -> Disciplina[0..N]
 }
 
 relationship Matriculado {
-    Aluno -> Disciplina
+    Aluno[0..N] -> Disciplina[1..N]
     notas multivalued
 }
