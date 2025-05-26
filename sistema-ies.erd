@@ -1,7 +1,11 @@
 erdiagram SistemaIES
 notation=chen
 
-entity Departamento {}
+entity Departamento {
+    codigo key
+    nome
+    descricao
+}
 entity Disciplina {}
 
 relationship Responsavel{
