@@ -15,6 +15,7 @@ entity Curso {
     codigo key
     denominacao
 }
+entity Professor {}
 
 relationship Responsavel {
     Departamento[1..1] -> Disciplina[N]
@@ -31,4 +32,8 @@ relationship Equivale {
 relationship Oferta {
     Curso -> Disciplina[N]
     semestre
+}
+
+relationship Leciona {
+    Professor -> Disciplina
 }
